@@ -11,7 +11,7 @@ class Theme:
 class ThemeManager:
     def __init__(self) -> None:
         self._themes = {
-            "light": Theme("light", background="#FFFFFF", foreground="#111111"),
+            "light": Theme("light", background="#FFFFFF", foreground="#333333"),
             "dark": Theme("dark", background="#111111", foreground="#EEEEEE"),
         }
 
