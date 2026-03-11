@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartNotepad — Умный текстовый редактор</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">
+        <span class="logo__icon">✦</span>
+        <span class="logo__text">SmartNotepad</span>
+      </div>
+      <nav class="nav">
+        <a href="#about" class="nav__link">О проекте</a>
+        <a href="#features" class="nav__link">Возможности</a>
+        <a href="#architecture" class="nav__link">Архитектура</a>
+        <a href="#tech" class="nav__link">Технологии</a>
+        <a href="#stages" class="nav__link">Этапы</a>
+        <a href="#docs" class="nav__link">Документы</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="container hero__content">
+      <div class="hero__badge">Лабораторная работа · Программная инженерия</div>
+      <h1 class="hero__title">Smart<span class="accent">Notepad</span></h1>
+      <p class="hero__subtitle">Текстовый редактор с поддержкой семантики языков программирования и системой тем оформления</p>
+      <div class="hero__pills">
+        <span class="pill">Синтаксическая подсветка</span>
+        <span class="pill">Автодополнение</span>
+        <span class="pill">Семантический анализ</span>
+        <span class="pill">Тёмная тема</span>
+        <span class="pill">Автосохранение</span>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">↓</div>
+  </section>
+
+  <!-- О ПРОЕКТЕ -->
+  <section id="about" class="section section--light">
+    <div class="container">
+      <div class="section__label">01 — О проекте</div>
+      <h2 class="section__title">Что такое SmartNotepad?</h2>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>SmartNotepad — это современный текстовый редактор, разработанный в рамках дисциплины «Профессиональная практика программной инженерии». Проект демонстрирует применение принципов модульной архитектуры, командной разработки с использованием Git и документирования программного обеспечения.</p>
+          <p>Редактор ориентирован на разработчиков и студентов, которым необходим лёгкий инструмент для работы с кодом и текстовыми документами без избыточного функционала.</p>
+        </div>
+        <div class="about__stats">
+          <div class="stat-card">
+            <div class="stat-card__num">12</div>
+            <div class="stat-card__label">модулей в системе</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__num">8</div>
+            <div class="stat-card__label">ключевых возможностей</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__num">7</div>
+            <div class="stat-card__label">этапов разработки</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__num">∞</div>
+            <div class="stat-card__label">возможностей расширения</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОСНОВНЫЕ ВОЗМОЖНОСТИ -->
+  <section id="features" class="section section--dark">
+    <div class="container">
+      <div class="section__label">02 — Возможности</div>
+      <h2 class="section__title">Основные возможности</h2>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">📁</div>
+          <h3 class="feature-card__title">Работа с файлами</h3>
+          <p class="feature-card__text">Создание, открытие и сохранение файлов в различных форматах. Поддержка быстрого доступа к недавним документам и управление проектом.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">✏️</div>
+          <h3 class="feature-card__title">Редактирование текста</h3>
+          <p class="feature-card__text">Полнофункциональный текстовый редактор с поддержкой основных операций: копирование, вставка, отмена действий, выделение и форматирование.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🎨</div>
+          <h3 class="feature-card__title">Синтаксическая подсветка</h3>
+          <p class="feature-card__text">Цветовое выделение синтаксических конструкций для Python, JavaScript, Java и других языков программирования. Повышает читаемость кода.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">💡</div>
+          <h3 class="feature-card__title">Автодополнение</h3>
+          <p class="feature-card__text">Интеллектуальные подсказки при вводе кода: ключевые слова, имена переменных, стандартные функции и пользовательские идентификаторы.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🌙</div>
+          <h3 class="feature-card__title">Темы оформления</h3>
+          <p class="feature-card__text">Переключение между светлой и тёмной темой. Поддержка пользовательских цветовых схем для комфортной работы в любое время суток.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🔍</div>
+          <h3 class="feature-card__title">Поиск по документу</h3>
+          <p class="feature-card__text">Быстрый поиск и замена текста с поддержкой регулярных выражений. Навигация по совпадениям и подсветка найденных фрагментов.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🗂️</div>
+          <h3 class="feature-card__title">Вкладки</h3>
+          <p class="feature-card__text">Одновременная работа с несколькими файлами через систему вкладок. Удобное переключение между документами без потери контекста.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">💾</div>
+          <h3 class="feature-card__title">Автосохранение</h3>
+          <p class="feature-card__text">Автоматическое сохранение изменений через заданные промежутки времени. Восстановление несохранённых данных после непредвиденного завершения работы.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- АРХИТЕКТУРА -->
+  <section id="architecture" class="section section--light">
+    <div class="container">
+      <div class="section__label">03 — Архитектура</div>
+      <h2 class="section__title">Модульная архитектура</h2>
+      <p class="section__desc">Система построена по принципу разделения ответственности. Каждый модуль решает строго определённую задачу и взаимодействует с остальными через чётко определённые интерфейсы.</p>
+      <div class="modules__grid">
+        <div class="module-item">
+          <span class="module-item__num">01</span>
+          <span class="module-item__name">Модуль пользовательского интерфейса</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">02</span>
+          <span class="module-item__name">Модуль управления файлами</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">03</span>
+          <span class="module-item__name">Модуль текстового редактора</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">04</span>
+          <span class="module-item__name">Модуль синтаксической подсветки</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">05</span>
+          <span class="module-item__name">Модуль семантического анализа кода</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">06</span>
+          <span class="module-item__name">Модуль автодополнения</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">07</span>
+          <span class="module-item__name">Модуль управления темами оформления</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">08</span>
+          <span class="module-item__name">Модуль настроек пользователя</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">09</span>
+          <span class="module-item__name">Модуль автосохранения и восстановления данных</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">10</span>
+          <span class="module-item__name">Модуль управления вкладками</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">11</span>
+          <span class="module-item__name">Модуль поиска по проекту</span>
+        </div>
+        <div class="module-item">
+          <span class="module-item__num">12</span>
+          <span class="module-item__name">Модуль оптимизации производительности</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРЕИМУЩЕСТВА -->
+  <section class="section section--accent">
+    <div class="container">
+      <div class="section__label">04 — Преимущества</div>
+      <h2 class="section__title">Преимущества программы</h2>
+      <div class="advantages__grid">
+        <div class="advantage-block">
+          <div class="advantage-block__icon">⚡</div>
+          <h3>Высокая производительность</h3>
+          <p>Оптимизированный рендеринг обеспечивает мгновенный отклик даже при работе с большими файлами.</p>
+        </div>
+        <div class="advantage-block">
+          <div class="advantage-block__icon">🧩</div>
+          <h3>Расширяемость</h3>
+          <p>Модульная архитектура позволяет легко добавлять новые языки программирования и функциональные модули.</p>
+        </div>
+        <div class="advantage-block">
+          <div class="advantage-block__icon">🛡️</div>
+          <h3>Надёжность</h3>
+          <p>Система автосохранения и восстановления защищает данные от потери при любых сбоях.</p>
+        </div>
+        <div class="advantage-block">
+          <div class="advantage-block__icon">🎛️</div>
+          <h3>Гибкая настройка</h3>
+          <p>Пользователь может настроить интерфейс, тему оформления и параметры редактора под свои нужды.</p>
+        </div>
+        <div class="advantage-block">
+          <div class="advantage-block__icon">📖</div>
+          <h3>Чистый код</h3>
+          <p>Весь код сопровождается документацией, что упрощает поддержку и командную разработку.</p>
+        </div>
+        <div class="advantage-block">
+          <div class="advantage-block__icon">🔗</div>
+          <h3>Интеграция с Git</h3>
+          <p>Проект изначально спроектирован с учётом работы в системе контроля версий Git.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРИМЕРЫ ФУНКЦИЙ -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section__label">05 — Примеры функций</div>
+      <h2 class="section__title">Примеры функций</h2>
+      <div class="examples__grid">
+
+        <div class="example-card">
+          <div class="example-card__header">
+            <div class="example-card__dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="example-card__filename">document.txt</span>
+          </div>
+          <div class="example-card__body example-card__body--text">
+            <div class="mock-line mock-line--full"></div>
+            <div class="mock-line mock-line--wide"></div>
+            <div class="mock-line mock-line--medium"></div>
+            <div class="mock-line mock-line--full"></div>
+            <div class="mock-line mock-line--short"></div>
+            <div class="mock-line mock-line--wide"></div>
+          </div>
+          <div class="example-card__footer">
+            <h3>Работа с текстовыми файлами</h3>
+            <p>Открытие, редактирование и сохранение текстовых документов. Поддержка кодировок UTF-8 и управление историей изменений.</p>
+          </div>
+        </div>
+
+        <div class="example-card">
+          <div class="example-card__header">
+            <div class="example-card__dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="example-card__filename">main.py</span>
+          </div>
+          <div class="example-card__body example-card__body--code">
+            <div class="code-line">
+              <span class="tok-kw">def</span>
+              <span class="tok-fn"> calculate</span>
+              <span class="tok-pu">(</span>
+              <span class="tok-var">x</span>
+              <span class="tok-pu">, </span>
+              <span class="tok-var">y</span>
+              <span class="tok-pu">):</span>
+            </div>
+            <div class="code-line code-line--indent">
+              <span class="tok-cm"># возвращает сумму</span>
+            </div>
+            <div class="code-line code-line--indent">
+              <span class="tok-kw">return</span>
+              <span class="tok-var"> x</span>
+              <span class="tok-pu"> + </span>
+              <span class="tok-var">y</span>
+            </div>
+            <div class="code-line">&nbsp;</div>
+            <div class="code-line">
+              <span class="tok-var">result</span>
+              <span class="tok-pu"> = </span>
+              <span class="tok-fn">calculate</span>
+              <span class="tok-pu">(</span>
+              <span class="tok-num">10</span>
+              <span class="tok-pu">, </span>
+              <span class="tok-num">20</span>
+              <span class="tok-pu">)</span>
+            </div>
+            <div class="code-line">
+              <span class="tok-fn">print</span>
+              <span class="tok-pu">(</span>
+              <span class="tok-str">"Результат:"</span>
+              <span class="tok-pu">, </span>
+              <span class="tok-var">result</span>
+              <span class="tok-pu">)</span>
+            </div>
+          </div>
+          <div class="example-card__footer">
+            <h3>Подсветка синтаксиса Python</h3>
+            <p>Цветовое выделение ключевых слов, строк, чисел, функций и комментариев для повышения читаемости кода.</p>
+          </div>
+        </div>
+
+        <div class="example-card">
+          <div class="example-card__header">
+            <div class="example-card__dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="example-card__filename">Настройки · Тема</span>
+          </div>
+          <div class="example-card__body example-card__body--theme">
+            <div class="theme-preview">
+              <div class="theme-preview__half theme-preview__half--light">
+                <div class="theme-icon">☀️</div>
+                <div class="theme-label">Светлая</div>
+                <div class="theme-mockbar theme-mockbar--light"></div>
+                <div class="theme-mockbar theme-mockbar--light theme-mockbar--short"></div>
+              </div>
+              <div class="theme-preview__divider"></div>
+              <div class="theme-preview__half theme-preview__half--dark">
+                <div class="theme-icon">🌙</div>
+                <div class="theme-label">Тёмная</div>
+                <div class="theme-mockbar theme-mockbar--dark"></div>
+                <div class="theme-mockbar theme-mockbar--dark theme-mockbar--short"></div>
+              </div>
+            </div>
+          </div>
+          <div class="example-card__footer">
+            <h3>Переключение тем оформления</h3>
+            <p>Мгновенное переключение между светлой и тёмной темой. Параметры сохраняются между сессиями работы.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ТЕХНОЛОГИИ -->
+  <section id="tech" class="section section--light">
+    <div class="container">
+      <div class="section__label">06 — Технологии</div>
+      <h2 class="section__title">Используемые технологии</h2>
+      <div class="tech__grid">
+        <div class="tech-item">
+          <div class="tech-item__icon">🐍</div>
+          <div class="tech-item__name">Python</div>
+          <div class="tech-item__desc">Основной язык реализации логики приложения</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon">🖥️</div>
+          <div class="tech-item__name">Tkinter / Qt</div>
+          <div class="tech-item__desc">Библиотека для построения графического интерфейса</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon">🔀</div>
+          <div class="tech-item__name">Git</div>
+          <div class="tech-item__desc">Система контроля версий и командная разработка</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon">🧪</div>
+          <div class="tech-item__name">unittest / pytest</div>
+          <div class="tech-item__desc">Фреймворки для написания и запуска тестов</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon">📦</div>
+          <div class="tech-item__name">re / tokenize</div>
+          <div class="tech-item__desc">Модули стандартной библиотеки для лексического анализа</div>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon">🌐</div>
+          <div class="tech-item__name">HTML / CSS</div>
+          <div class="tech-item__desc">Вёрстка документации и веб-страницы проекта</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЭТАПЫ -->
+  <section id="stages" class="section section--dark">
+    <div class="container">
+      <div class="section__label">07 — Этапы</div>
+      <h2 class="section__title">Этапы разработки</h2>
+      <div class="stages__list">
+        <div class="stage-item">
+          <div class="stage-item__line"></div>
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 1</div>
+            <h3 class="stage-item__title">Проектирование модулей</h3>
+            <p class="stage-item__text">Определение компонентного состава системы, проектирование интерфейсов взаимодействия между модулями, создание диаграмм архитектуры.</p>
+          </div>
+        </div>
+        <div class="stage-item">
+          <div class="stage-item__line"></div>
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 2</div>
+            <h3 class="stage-item__title">Создание структуры репозитория</h3>
+            <p class="stage-item__text">Инициализация репозитория Git, формирование файловой структуры проекта, настройка .gitignore и README.</p>
+          </div>
+        </div>
+        <div class="stage-item">
+          <div class="stage-item__line"></div>
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 3</div>
+            <h3 class="stage-item__title">Работа с ветками Git</h3>
+            <p class="stage-item__text">Организация параллельной разработки через ветки: feature-ветки для каждого модуля, pull-запросы и code review перед слиянием.</p>
+          </div>
+        </div>
+        <div class="stage-item">
+          <div class="stage-item__line"></div>
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 4</div>
+            <h3 class="stage-item__title">Восстановление файлов из ревизий</h3>
+            <p class="stage-item__text">Практика использования команд git log, git checkout и git revert для восстановления предыдущих версий файлов и отмены изменений.</p>
+          </div>
+        </div>
+        <div class="stage-item">
+          <div class="stage-item__line"></div>
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 5</div>
+            <h3 class="stage-item__title">Документирование кода</h3>
+            <p class="stage-item__text">Написание docstring для всех публичных классов, методов и функций. Генерация HTML-документации с помощью автоматических инструментов.</p>
+          </div>
+        </div>
+        <div class="stage-item">
+          <div class="stage-item__line"></div>
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 6</div>
+            <h3 class="stage-item__title">Создание пользовательского руководства</h3>
+            <p class="stage-item__text">Разработка инструкции по установке, запуску и использованию программы. Описание всех доступных функций и параметров настройки.</p>
+          </div>
+        </div>
+        <div class="stage-item">
+          <div class="stage-item__dot"></div>
+          <div class="stage-item__content">
+            <div class="stage-item__num">Этап 7</div>
+            <h3 class="stage-item__title">Разработка веб-сайта проекта</h3>
+            <p class="stage-item__text">Создание одностраничного презентационного сайта на HTML и CSS для публикации на GitHub Pages. Оформление публичной страницы репозитория.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ДОКУМЕНТЫ -->
+  <section id="docs" class="section section--light">
+    <div class="container">
+      <div class="section__label">08 — Документы</div>
+      <h2 class="section__title">Лабораторные работы</h2>
+      <p class="section__desc">Отчёты по всем этапам выполнения лабораторных работ в формате Word.</p>
+      <div class="docs__grid">
+
+        <a class="doc-card" href="docs/Лаб1.docx" download>
+          <div class="doc-card__icon">📄</div>
+          <div class="doc-card__body">
+            <div class="doc-card__title">Лабораторная работа №1</div>
+            <div class="doc-card__sub">Проектирование модулей системы</div>
+          </div>
+          <div class="doc-card__badge">.docx ↓</div>
+        </a>
+
+        <a class="doc-card" href="docs/Лаб2.docx" download>
+          <div class="doc-card__icon">📄</div>
+          <div class="doc-card__body">
+            <div class="doc-card__title">Лабораторная работа №2</div>
+            <div class="doc-card__sub">Создание структуры репозитория Git</div>
+          </div>
+          <div class="doc-card__badge">.docx ↓</div>
+        </a>
+
+        <a class="doc-card" href="docs/Лаб3.docx" download>
+          <div class="doc-card__icon">📄</div>
+          <div class="doc-card__body">
+            <div class="doc-card__title">Лабораторная работа №3</div>
+            <div class="doc-card__sub">Работа с ветками и ревизиями Git</div>
+          </div>
+          <div class="doc-card__badge">.docx ↓</div>
+        </a>
+
+        <a class="doc-card" href="docs/Лаб4.docx" download>
+          <div class="doc-card__icon">📄</div>
+          <div class="doc-card__body">
+            <div class="doc-card__title">Лабораторная работа №4</div>
+            <div class="doc-card__sub">Документирование кода и руководство пользователя</div>
+          </div>
+          <div class="doc-card__badge">.docx ↓</div>
+        </a>
+
+        <a class="doc-card" href="docs/Лаб5.docx" download>
+          <div class="doc-card__icon">📄</div>
+          <div class="doc-card__body">
+            <div class="doc-card__title">Лабораторная работа №5</div>
+            <div class="doc-card__sub">Разработка веб-сайта проекта</div>
+          </div>
+          <div class="doc-card__badge">.docx ↓</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ЗАКЛЮЧЕНИЕ -->
+  <section class="section section--conclusion">
+    <div class="container conclusion__inner">
+      <div class="section__label">09 — Заключение</div>
+      <h2 class="section__title">Заключение</h2>
+      <div class="conclusion__text">
+        <p>В ходе выполнения лабораторной работы был спроектирован и реализован SmartNotepad — текстовый редактор с поддержкой семантики языков программирования. Проект охватывает полный цикл разработки: от проектирования архитектуры и работы с системой контроля версий до документирования и публичной презентации результатов.</p>
+        <p>Модульный подход позволил чётко разграничить зоны ответственности компонентов и создать расширяемую основу для дальнейшего развития продукта. Применение Git обеспечило прозрачную историю изменений и поддержку командной работы.</p>
+        <p>Проект наглядно демонстрирует применение принципов профессиональной программной инженерии на практике.</p>
+      </div>
+      <div class="conclusion__badge">
+        SmartNotepad · Профессиональная практика программной инженерии
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">
+        <span class="logo__icon">✦</span>
+        SmartNotepad
+      </div>
+      <div class="footer__text">Учебный проект по дисциплине «Профессиональная практика программной инженерии»</div>
+    </div>
+  </footer>
+
+</body>
+</html>
