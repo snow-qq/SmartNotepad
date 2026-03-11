@@ -1,0 +1,198 @@
+<html>
+<head>
+    <title>Руководство пользователя SmartNotepad</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <hta:application
+        id="SmartNotepadHelp"
+        applicationname="SmartNotepad Help"
+        border="thick"
+        borderstyle="normal"
+        caption="yes"
+        maximizebutton="yes"
+        minimizebutton="yes"
+        sysmenu="yes"
+        scroll="yes"
+        singleinstance="yes"
+        windowstate="normal"
+    />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #222;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sidebar {
+            float: left;
+            width: 260px;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            overflow: auto;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .sidebar button {
+            width: 100%;
+            margin-bottom: 8px;
+            padding: 10px;
+            border: none;
+            background: #34495e;
+            color: white;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .sidebar button:hover {
+            background: #1abc9c;
+        }
+
+        .content {
+            margin-left: 260px;
+            padding: 30px;
+            background: white;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .section {
+            display: none;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+
+    <script language="javascript">
+        function hideAllSections() {
+            var divs = document.getElementsByTagName("div");
+            var i;
+
+            for (i = 0; i < divs.length; i++) {
+                if (divs[i].className == "section") {
+                    divs[i].style.display = "none";
+                }
+            }
+        }
+
+        function showSection(id) {
+            hideAllSections();
+            document.getElementById(id).style.display = "block";
+        }
+
+        window.onload = function () {
+            showSection("home");
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>SmartNotepad</h2>
+            <button onclick="showSection('home')">Главная страница</button>
+            <button onclick="showSection('purpose')">Назначение программы</button>
+            <button onclick="showSection('interface')">Интерфейс программы</button>
+            <button onclick="showSection('files')">Работа с файлами</button>
+            <button onclick="showSection('editing')">Редактирование текста</button>
+            <button onclick="showSection('highlight')">Синтаксическая подсветка</button>
+            <button onclick="showSection('semantic')">Семантический анализ</button>
+            <button onclick="showSection('autocomplete')">Автодополнение</button>
+            <button onclick="showSection('themes')">Темы оформления</button>
+            <button onclick="showSection('autosave')">Автосохранение</button>
+            <button onclick="showSection('tabs')">Работа со вкладками</button>
+            <button onclick="showSection('search')">Поиск по документу</button>
+            <button onclick="showSection('final')">Заключение</button>
+        </div>
+
+        <div class="content">
+            <div id="home" class="section">
+                <h1>Руководство пользователя SmartNotepad</h1>
+                <p>SmartNotepad представляет собой текстовый редактор с поддержкой семантики языков программирования и системой тем оформления.</p>
+                <p>Данное руководство предназначено для ознакомления пользователя с основными возможностями программы и порядком работы с ней.</p>
+            </div>
+
+            <div id="purpose" class="section">
+                <h2>Назначение программы</h2>
+                <p>Программа предназначена для создания, открытия, редактирования и сохранения текстовых документов, а также для работы с программным кодом.</p>
+            </div>
+
+            <div id="interface" class="section">
+                <h2>Интерфейс программы</h2>
+                <p>Главное окно программы включает меню, панель инструментов, область редактирования, вкладки открытых файлов и строку состояния.</p>
+                <img src="images/interface.png" width="700">
+            </div>
+
+            <div id="files" class="section">
+                <h2>Работа с файлами</h2>
+                <p>Пользователь может создать новый документ, открыть существующий файл, сохранить изменения и выполнить сохранение под новым именем.</p>
+                <img src="images/file_open.png" width="700">
+            </div>
+
+            <div id="editing" class="section">
+                <h2>Редактирование текста</h2>
+                <p>Редактор поддерживает ввод текста, удаление символов, копирование, вставку, выделение, поиск и замену фрагментов.</p>
+            </div>
+
+            <div id="highlight" class="section">
+                <h2>Синтаксическая подсветка</h2>
+                <p>Программа выделяет ключевые слова, комментарии, строки и другие элементы кода различными цветами для повышения читаемости.</p>
+                <img src="images/syntax_highlight.png" width="700">
+            </div>
+
+            <div id="semantic" class="section">
+                <h2>Семантический анализ кода</h2>
+                <p>Модуль семантического анализа позволяет выявлять ошибки в структуре текста, например несбалансированные скобки и кавычки.</p>
+            </div>
+
+            <div id="autocomplete" class="section">
+                <h2>Автодополнение</h2>
+                <p>При вводе текста программа может предлагать варианты завершения ключевых слов и конструкций языка программирования.</p>
+            </div>
+
+            <div id="themes" class="section">
+                <h2>Темы оформления</h2>
+                <p>Пользователь может выбрать светлую или тёмную тему оформления для более комфортной работы с редактором.</p>
+                <img src="images/theme_switch.png" width="700">
+            </div>
+
+            <div id="autosave" class="section">
+                <h2>Автосохранение</h2>
+                <p>Программа периодически сохраняет текущее состояние документа, что позволяет восстановить данные после сбоя.</p>
+            </div>
+
+            <div id="tabs" class="section">
+                <h2>Работа со вкладками</h2>
+                <p>SmartNotepad поддерживает одновременную работу с несколькими открытыми документами в отдельных вкладках.</p>
+            </div>
+
+            <div id="search" class="section">
+                <h2>Поиск по документу</h2>
+                <p>Пользователь может выполнять поиск текста внутри текущего документа для быстрого перехода к нужному фрагменту.</p>
+            </div>
+
+            <div id="final" class="section">
+                <h2>Заключение</h2>
+                <p>SmartNotepad является удобным текстовым редактором, сочетающим базовые функции блокнота и инструменты для работы с программным кодом.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
