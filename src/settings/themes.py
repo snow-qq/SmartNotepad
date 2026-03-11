@@ -7,8 +7,18 @@ class Theme:
     background: str
     foreground: str
 
+    """
+    Класс ThemeManager предназначен для управления темами оформления
+    текстового редактора SmartNotepad.
 
+    Данный класс хранит доступные темы интерфейса и позволяет
+    переключать их во время работы программы.
+
+    Attributes:
+        themes (dict): список доступных тем оформления.
+    """
 class ThemeManager:
+    """Создает набор стандартных тем оформления."""
     def __init__(self) -> None:
         self._themes = {
             "light": Theme("light", background="#FFFFFF", foreground="#111111"),
