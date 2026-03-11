@@ -26,6 +26,15 @@ class ThemeManager:
         }
 
     def get(self, name: str) -> Theme:
+        """
+        Возвращает параметры выбранной темы оформления.
+
+         Args:
+            name (str): название темы оформления.
+
+        Returns:
+            dict: параметры цветовой схемы интерфейса.
+        """
         return self._themes.get(name, self._themes["light"])
 
     def list_themes(self) -> list[str]:
